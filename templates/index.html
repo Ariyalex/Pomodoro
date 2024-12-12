@@ -2,12 +2,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Pomodoro/static/output.css">
+    <link rel="stylesheet" href="../static/output.css">
     <title>Pomodoro</title>
 </head>
-<body>
-    <header>
-        <h1 class="border-[4px] border-black">testing</h1>
+<body class="bg-[#F8FAFC]">
+    <header class="bg-[#D9EAFD] h-[50px] flex flex-row items-center px-[10px] z-30">
+        <div class="flex flex-row">
+            <h1>Pomodoro</h1>
+            
+        </div>
     </header>
+    <main class="bg-[#F8FAFC] flex flex-col items-center align-top w-full">
+        <div class="flex flex-row gap-3 p-4 mt-5 bg-[#BCCCDC] box_2" id="focused_btn">
+            <button class="btn_2">Pomodoro</button>
+            <button class="btn_2">Short Rest</button>
+            <button class="btn_2">Long Rest</button>
+        </div>
+        <div class="flex flex-col place-items-center box_1 p-2 mt-5">
+            <!-- example -->
+            <h1 class="text-[100px]">25:00</h1>
+            <div class="flex flex-row gap-3 p-2">
+                <button class="btn" onclick="start()">Start</button>
+                <button class="btn" onclick="pause()">Pause</button>
+                <button class="btn" onclick="reset()">Reset</button> 
+        </div>
+    </main>
+    <script src="./js/script.js"></script>
 </body>
 </html>
