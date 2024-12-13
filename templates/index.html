@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -20,11 +21,11 @@
         </div>
         <div class="flex flex-col place-items-center box_1 p-2 mt-5">
             <!-- example -->
-            <h1 class="text-[100px]">25:00</h1>
+            <h1 id="time" class="text-[100px]">25:00</h1>
             <div class="flex flex-row gap-3 p-2">
-                <button class="btn" onclick="start()">Start</button>
-                <button class="btn" onclick="pause()">Pause</button>
-                <button class="btn" onclick="reset()">Reset</button> 
+                <button id="start_pmdr" class="btn" onclick="startPomodoro()">Start</button>
+                <button id="pause" class="btn" onclick="pausePomodoro()">Pause</button>
+                <button class="btn" onclick="resetPomodoro()">Reset</button> 
         </div>
     </main>
     <script src="./js/script.js"></script>
