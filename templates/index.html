@@ -10,24 +10,26 @@
     <header class="bg-[#D9EAFD] h-[50px] flex flex-row items-center px-[10px] z-30">
         <div class="flex flex-row">
             <h1>Pomodoro</h1>
-            
         </div>
     </header>
     <main class="bg-[#F8FAFC] flex flex-col items-center align-top w-full">
         <div class="flex flex-row gap-3 p-4 mt-5 bg-[#BCCCDC] box_2" id="focused_btn">
-            <button class="btn_2">Pomodoro</button>
-            <button class="btn_2">Short Rest</button>
-            <button class="btn_2">Long Rest</button>
+            <button id="pomodoroBtn" class="btn_2" onclick="pomodoro()" >Pomodoro</button>
+            <button id="shortRestBtn" class="btn_2" onclick="shortBreak()">Short Rest</button>
+            <button id="longRestBtn" class="btn_2" onclick="longBreak()" >Long Rest</button>
         </div>
-        <div class="flex flex-col place-items-center box_1 p-2 mt-5">
-            <!-- example -->
-            <h1 id="time" class="text-[100px]">25:00</h1>
+        <div class="flex flex-col place-items-center box_1 py-2 mt-5 px-10">
+            <h1 id="status" class="text-[35px] font-semibold">Pomodoro</h1>
+            <h1 id="time" class="text-[100px] font-bold">25:00</h1>
             <div class="flex flex-row gap-3 p-2">
-                <button id="start_pmdr" class="btn" onclick="startPomodoro()">Start</button>
-                <button id="pause" class="btn" onclick="pausePomodoro()">Pause</button>
-                <button class="btn" onclick="resetPomodoro()">Reset</button> 
+                <button id="pause" class="btn w-[100px] h-[40px]" onclick="pausePomodoro()">Start</button>
+                <button class="btn w-[100px] h-[40px]" onclick="resetPomodoro()">Reset</button> 
         </div>
     </main>
+    <div class="absolute rounded-md top-4 right-4 p-3 bg-slate-500 transition-all duration-500 ease-in-out" id="notificationPermission">
+        <p class="text-white pb-2">Please allow notification for this web</p>
+        <button class="btn p-2" onclick="askNotificationPermission()">Ask permission</button>
+    </div>
     <script src="./js/script.js"></script>
 </body>
 </html>

@@ -12,7 +12,7 @@
 }
 
 .btn {
-    @apply bg-[#F8FAFC] text-[#4b4e50] w-[100px] h-[40px] rounded-md hover:shadow-[3px_3px_0px_rgba(0,0,0,1)] hover:-translate-x-[3px] hover:-translate-y-[3px] transition-all duration-200 ease-in-out;
+    @apply bg-[#F8FAFC] text-[#4b4e50] rounded-md hover:shadow-[3px_3px_0px_rgba(0,0,0,1)] hover:-translate-x-[3px] hover:-translate-y-[3px] transition-all duration-200 ease-in-out;
 }
 
 .btn_2 {
