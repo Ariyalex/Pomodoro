@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/output.css">
+
     <title>Pomodoro</title>
 </head>
 <body class="bg-[#F8FAFC]">
@@ -13,7 +14,7 @@
         </div>
     </header>
     <main class="bg-[#F8FAFC] flex sm:flex-row place-content-center flex-col gap-3 w-full h-full">
-        <div class="flex flex-col">
+        <div class="flex flex-col items-center">
             <div class="flex flex-row gap-3 p-4 mt-5 w-fit bg-[#BCCCDC] box_2" id="focused_btn">
                 <button id="pomodoroBtn" class="btn_2" onclick="pomodoro()" >Pomodoro</button>
                 <button id="shortRestBtn" class="btn_2" onclick="shortBreak()">Short Rest</button>
@@ -28,10 +29,14 @@
                 </div>
             </div>
         </div>
-        <div class="flex flex-col gap-2 p-4 mt-5 bg-[#BCCCDC] box_2">
-            <input type="text" id="task" class="input p-1 rounded-md" placeholder="Add your task here">
-            <button class="btn" onclick="addTask()">Add Task</button>
-            <ul id="taskList" class="list-disc list-inside">
+        <div class="flex flex-col h-[370px] gap-2 p-4 mt-5 bg-[#9AA6B2] shadow-[5px_5px_0px_rgba(0,0,0,1)] rounded-md">
+            <input type="text" id="task" class="input p-1 rounded-md outline-none border-black border-[1px]" placeholder="Add your task here">
+            <div class="flex flex-row gap-2 w-full">
+                <button class="btn py-[3px] basis-1/2" onclick="addTask()">Add Task</button>
+                <button class="btn py-[3px] basis-1/2" onclick="deleteTask()">Del Done</button>
+            </div>
+
+            <ul id="taskList" class="list-disc list-inside text-white gap-2 flex flex-col overflow-auto">
             </ul>
         </div>
     </main>

@@ -191,3 +191,39 @@ function checkTimerEnd() {
 }
 
 setInterval(checkTimerEnd, 1000);
+
+function addTask() {
+    const task = document.getElementById('task').value;
+    const taskList = document.getElementById('taskList');
+    const li = document.createElement('li');
+    const check = document.createElement('input');
+    check.type = 'checkbox';
+    check.classList.add('check');
+    if (!task) {
+        alert('Task cannot be empty');
+        return;
+    }
+    li.textContent = task;
+    taskList.appendChild(li);
+    li.appendChild(check);
+    li.classList.add('taskLi');
+    document.getElementById('task').value = '';
+}
+
+document.getElementById('taskList').addEventListener('change', function(event) {
+    if (event.target.classList.contains('check')) {
+        const listItem = event.target.parentElement;
+        if (event.target.checked) {
+            listItem.classList.add('lineThrough');
+        } else {
+            listItem.classList.remove('lineThrough');
+        }
+    }
+});
+
+function deleteTask() {
+    const checked = document.getElementsByClassName('lineThrough');
+    while (checked.length > 0) {
+        checked[0].parentElement.removeChild(checked[0]);
+    }
+}

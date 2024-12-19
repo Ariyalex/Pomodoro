@@ -554,10 +554,6 @@ video {
   display: none;
 }
 
-.fixed {
-  position: fixed;
-}
-
 .absolute {
   position: absolute;
 }
@@ -570,28 +566,8 @@ video {
   top: 1rem;
 }
 
-.left-0 {
-  left: 0px;
-}
-
-.top-0 {
-  top: 0px;
-}
-
 .z-30 {
   z-index: 30;
-}
-
-.z-0 {
-  z-index: 0;
-}
-
-.-z-10 {
-  z-index: -10;
-}
-
-.z-10 {
-  z-index: 10;
 }
 
 .mt-5 {
@@ -606,16 +582,16 @@ video {
   display: none;
 }
 
+.h-\[370px\] {
+  height: 370px;
+}
+
 .h-\[40px\] {
   height: 40px;
 }
 
 .h-\[50px\] {
   height: 50px;
-}
-
-.h-screen {
-  height: 100vh;
 }
 
 .h-full {
@@ -626,17 +602,17 @@ video {
   width: 100px;
 }
 
+.w-fit {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
 .w-full {
   width: 100%;
 }
 
-.w-screen {
-  width: 100vw;
-}
-
-.w-fit {
-  width: -moz-fit-content;
-  width: fit-content;
+.basis-1\/2 {
+  flex-basis: 50%;
 }
 
 .translate-x-\[500px\] {
@@ -672,24 +648,34 @@ video {
   align-items: center;
 }
 
-.justify-center {
-  justify-content: center;
+.gap-2 {
+  gap: 0.5rem;
 }
 
 .gap-3 {
   gap: 0.75rem;
 }
 
-.gap-5 {
-  gap: 1.25rem;
-}
-
-.gap-2 {
-  gap: 0.5rem;
+.overflow-auto {
+  overflow: auto;
 }
 
 .rounded-md {
   border-radius: 0.375rem;
+}
+
+.border-\[1px\] {
+  border-width: 1px;
+}
+
+.border-black {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity, 1));
+}
+
+.bg-\[\#9AA6B2\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(154 166 178 / var(--tw-bg-opacity, 1));
 }
 
 .bg-\[\#BCCCDC\] {
@@ -707,9 +693,8 @@ video {
   background-color: rgb(100 116 139 / var(--tw-bg-opacity, 1));
 }
 
-.object-cover {
-  -o-object-fit: cover;
-     object-fit: cover;
+.p-1 {
+  padding: 0.25rem;
 }
 
 .p-2 {
@@ -724,32 +709,9 @@ video {
   padding: 1rem;
 }
 
-.p-5 {
-  padding: 1.25rem;
-}
-
-.p-1 {
-  padding: 0.25rem;
-}
-
 .px-10 {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
-}
-
-.px-\[10px\] {
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-.py-2 {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-}
-
-.px-4 {
-  padding-left: 1rem;
-  padding-right: 1rem;
 }
 
 .px-\[50px\] {
@@ -757,12 +719,18 @@ video {
   padding-right: 50px;
 }
 
-.pb-2 {
+.py-2 {
+  padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
 
-.align-top {
-  vertical-align: top;
+.py-\[3px\] {
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.pb-2 {
+  padding-bottom: 0.5rem;
 }
 
 .text-\[100px\] {
@@ -786,20 +754,19 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
-.opacity-0 {
-  opacity: 0;
+.line-through {
+  text-decoration-line: line-through;
 }
 
-.opacity-30 {
-  opacity: 0.3;
+.shadow-\[5px_5px_0px_rgba\(0\2c 0\2c 0\2c 1\)\] {
+  --tw-shadow: 5px 5px 0px rgba(0,0,0,1);
+  --tw-shadow-colored: 5px 5px 0px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.opacity-10 {
-  opacity: 0.1;
-}
-
-.opacity-100 {
-  opacity: 1;
+.outline-none {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
 }
 
 .transition-all {
@@ -817,6 +784,16 @@ video {
 }
 
 /* Custom CSS */
+
+@font-face {
+  font-family: 'Helvetica';
+
+  src: url('./fonts/Helvetica.ttf') format('truetype');
+}
+
+* {
+  font-family: 'Helvetica';
+}
 
 .box_1 {
   height: -moz-fit-content;
@@ -890,12 +867,33 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.taskLi {
+  display: flex;
+  list-style-type: decimal;
+  flex-direction: row;
+  justify-content: space-between;
+  border-radius: 0.375rem;
+  border-width: 2px;
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity, 1));
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 250 252 / var(--tw-bg-opacity, 1));
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(75 78 80 / var(--tw-text-opacity, 1));
+}
+
+.lineThrough {
+  text-decoration: line-through;
+  text-decoration-color: red;
+  text-decoration-thickness: 2px;
+}
+
 @media (min-width: 640px) {
   .sm\:flex-row {
     flex-direction: row;
-  }
-
-  .sm\:flex-col {
-    flex-direction: column;
   }
 }
