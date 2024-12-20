@@ -192,6 +192,35 @@ function checkTimerEnd() {
 
 setInterval(checkTimerEnd, 1000);
 
+function saveTasks() {
+    const tasks = [];
+    document.querySelectorAll('#taskList li').forEach(li => {
+        tasks.push({
+            text: li.textContent,
+            completed: li.querySelector('input').checked
+        });
+    });
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+}
+
+function loadTasks() {
+    const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+    tasks.forEach(task => {
+        const li = document.createElement('li');
+        const check = document.createElement('input');
+        check.type = 'checkbox';
+        check.classList.add('check');
+        check.checked = task.completed;
+        li.textContent = task.text;
+        li.appendChild(check);
+        li.classList.add('taskLi');
+        if (task.completed) {
+            li.classList.add('lineThrough');
+        }
+        document.getElementById('taskList').appendChild(li);
+    });
+}
+
 function addTask() {
     const task = document.getElementById('task').value;
     const taskList = document.getElementById('taskList');
@@ -208,6 +237,7 @@ function addTask() {
     li.appendChild(check);
     li.classList.add('taskLi');
     document.getElementById('task').value = '';
+    saveTasks(); // Save tasks to local storage
 }
 
 document.getElementById('taskList').addEventListener('change', function(event) {
@@ -218,6 +248,7 @@ document.getElementById('taskList').addEventListener('change', function(event) {
         } else {
             listItem.classList.remove('lineThrough');
         }
+        saveTasks(); // Save tasks to local storage
     }
 });
 
@@ -226,4 +257,8 @@ function deleteTask() {
     while (checked.length > 0) {
         checked[0].parentElement.removeChild(checked[0]);
     }
+    saveTasks(); // Save tasks to local storage
 }
+
+// Load tasks from local storage on page load
+document.addEventListener('DOMContentLoaded', loadTasks);
