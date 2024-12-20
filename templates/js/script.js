@@ -18,6 +18,18 @@ let isPaused = false;
 let currentMode = 'pomodoro';
 let intervalCount = 0;
 const userDefinedInterval = 2; // Set this value based on user input
+let settingModal = document.getElementById('settingModal');
+let settingBtn = document.getElementById('settingBtn');
+
+function openSetting() {
+    settingModal.classList.remove('hidden');
+    settingModal.classList.add('flex');
+}
+
+function closeSetting() {
+    settingModal.classList.remove('flex');
+    settingModal.classList.add('hidden');
+}
 
 document.addEventListener('click', function(event) {
     if (!btn_container.contains(event.target) && focused_btn) {

@@ -4,13 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/output.css">
+    <script src="https://kit.fontawesome.com/385cd213ed.js" crossorigin="anonymous"></script>
 
     <title>Pomodoro</title>
 </head>
 <body class="bg-[#F8FAFC]">
     <header class=" h-[50px] flex flex-row items-center px-[50px] z-30">
-        <div class="flex flex-row">
+        <div class="flex flex-row justify-between w-full">
             <h1>Pomodoro</h1>
+            <button id="settingBtn" class="flex flex-row gap-2 ml-auto cursor-pointer" onclick="openSetting()">
+                <p>Setting</p>
+                <i class="fa-solid fa-gear"></i>
+            </button>
         </div>
     </header>
     <main class="bg-[#F8FAFC] flex sm:flex-row place-content-center flex-col gap-3 w-full h-full">
@@ -40,6 +45,27 @@
             </ul>
         </div>
     </main>
+    <div id="settingModal" class="hidden fixed inset-0 bg-gray-600 bg-opacity-50 justify-center items-center">
+        <div class="bg-white p-6 rounded-md shadow-md w-1/3">
+            <h2 class="text-xl font-bold mb-4">Settings</h2>
+            <div class="mb-4">
+                <label for="pomodoroDuration" class="block text-sm font-medium text-gray-700">Pomodoro Duration (minutes)</label>
+                <input type="number" id="pomodoroDuration" class="mt-1 p-2 border border-gray-300 rounded-md w-full" min="1">
+            </div>
+            <div class="mb-4">
+                <label for="shortBreakDuration" class="block text-sm font-medium text-gray-700">Short Break Duration (minutes)</label>
+                <input type="number" id="shortBreakDuration" class="mt-1 p-2 border border-gray-300 rounded-md w-full" min="1">
+            </div>
+            <div class="mb-4">
+                <label for="longBreakDuration" class="block text-sm font-medium text-gray-700">Long Break Duration (minutes)</label>
+                <input type="number" id="longBreakDuration" class="mt-1 p-2 border border-gray-300 rounded-md w-full" min="1">
+            </div>
+            <div class="flex justify-end gap-2">
+                <button class="btn p-2 bg-red-500 text-white rounded-md" onclick="closeSetting()">Cancel</button>
+                <button class="btn p-2 bg-blue-500 text-white rounded-md" onclick="saveSettings()">Save</button>
+            </div>
+        </div>
+    </div>
     <div class="absolute rounded-md top-4 right-4 p-3 bg-slate-500 transition-all duration-500 ease-in-out" id="notificationPermission">
         <p class="text-white pb-2">Please allow notification for this web</p>
         <button class="btn p-2" onclick="askNotificationPermission()">Ask permission</button>
