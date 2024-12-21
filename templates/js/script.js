@@ -249,7 +249,7 @@ function notifyAndStartShortBreak() {
 
 function notifyAndStartLongBreak() {
     if (Notification.permission === "granted") {
-        new Notification("Rehat dulu lama dikit");
+        new Notification("Rehat dulu yang lama");
     }
     longBreak();
 }
@@ -323,7 +323,7 @@ function addTask() {
     check.classList.add('check');
     p.classList.add('taskText');
     if (!task) {
-        alert('Task cannot be empty');
+        alert('Task harus diisi!');
         return;
     }
     p.textContent = task;

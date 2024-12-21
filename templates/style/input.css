@@ -19,11 +19,11 @@
 }
 
 .box_1 {
-    @apply w-fit h-fit border-black border-[2px] rounded-md shadow-[6px_6px_0px_rgba(0,0,0,1)];
+    @apply w-fit h-fit bg-[#F8FAFC] border-black border-[2px] rounded-md shadow-[6px_6px_0px_rgba(0,0,0,1)];
 }
 
 .box_2 {
-    @apply rounded-lg border-black border-[2px] hover:shadow-xl shadow-black transition-all duration-200 ease-in-out;
+    @apply rounded-lg bg-[#F8FAFC] border-black border-[2px] hover:shadow-xl shadow-black transition-all duration-200 ease-in-out;
 }
 
 .btn {
@@ -43,7 +43,7 @@
 }
 
 .taskText {
-    @apply w-[150px] break-all;
+    @apply w-[150px] break-words text-start;
 }
 
 .lineThrough {

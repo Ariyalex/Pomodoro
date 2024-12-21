@@ -728,6 +728,10 @@ video {
   overflow: auto;
 }
 
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
 .rounded-md {
   border-radius: 0.375rem;
 }
@@ -799,14 +803,14 @@ video {
   padding: 1.5rem;
 }
 
-.px-10 {
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
-}
-
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 
 .px-\[50px\] {
@@ -822,11 +826,6 @@ video {
 .py-\[3px\] {
   padding-top: 3px;
   padding-bottom: 3px;
-}
-
-.px-5 {
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
 }
 
 .pb-2 {
@@ -867,10 +866,6 @@ video {
   font-weight: 500;
 }
 
-.font-semibold {
-  font-weight: 600;
-}
-
 .text-gray-700 {
   --tw-text-opacity: 1;
   color: rgb(55 65 81 / var(--tw-text-opacity, 1));
@@ -879,11 +874,6 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
-}
-
-.text-red-500 {
-  --tw-text-opacity: 1;
-  color: rgb(239 68 68 / var(--tw-text-opacity, 1));
 }
 
 .shadow-\[6px_6px_0px_rgba\(0\2c 0\2c 0\2c 1\)\] {
@@ -944,6 +934,8 @@ video {
   border-width: 2px;
   --tw-border-opacity: 1;
   border-color: rgb(0 0 0 / var(--tw-border-opacity, 1));
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 250 252 / var(--tw-bg-opacity, 1));
   --tw-shadow: 6px 6px 0px rgba(0,0,0,1);
   --tw-shadow-colored: 6px 6px 0px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -954,6 +946,8 @@ video {
   border-width: 2px;
   --tw-border-opacity: 1;
   border-color: rgb(0 0 0 / var(--tw-border-opacity, 1));
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 250 252 / var(--tw-bg-opacity, 1));
   --tw-shadow-color: #000;
   --tw-shadow: var(--tw-shadow-colored);
   transition-property: all;
@@ -1033,7 +1027,8 @@ video {
 
 .taskText {
   width: 150px;
-  word-break: break-all;
+  overflow-wrap: break-word;
+  text-align: start;
 }
 
 .lineThrough {
@@ -1043,8 +1038,8 @@ video {
 }
 
 @media (min-width: 640px) {
-  .sm\:h-\[285px\] {
-    height: 285px;
+  .sm\:h-\[527px\] {
+    height: 527px;
   }
 
   .sm\:w-fit {
@@ -1054,5 +1049,9 @@ video {
 
   .sm\:flex-row {
     flex-direction: row;
+  }
+
+  .sm\:items-start {
+    align-items: flex-start;
   }
 }

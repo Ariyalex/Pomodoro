@@ -8,7 +8,7 @@
 
     <title id="title">Pomodoro Timer</title>
 </head>
-<body class="bg-[#F8FAFC]">
+<body class="bg-white">
     <header class=" h-[50px] flex flex-row items-center px-[50px] z-30 fixed top-0 w-full bg-white/55 backdrop-blur-sm">
         <div class="flex flex-row justify-between content-center w-full">
             <h1 class="font-[Helvetica-Bold] text-[28px]">Pomodoro</h1>
@@ -24,19 +24,19 @@
             <button id="shortRestBtn" class="btn_2" onclick="shortBreak()">Short Rest</button>
             <button id="longRestBtn" class="btn_2" onclick="longBreak()" >Long Rest</button>
         </div>
-        <div class="flex flex-col sm:flex-row gap-3 justify-center items-center">
+        <div class="flex flex-col sm:flex-row gap-3 justify-center items-center sm:items-start">
             <div class="flex flex-col items-center">
                 <div class="flex flex-col place-items-center box_1 py-2 px-5">
-                    <h1 id="status" class="text-[35px] font-semibold">Pomodoro</h1>
-                    <img id="imageTimer" src="./style/images/gura-work.gif" alt="">
-                    <h1 id="time" class="text-[100px] font-bold">25:00</h1>
+                    <h1 id="status" class="text-[35px] font-[Helvetica-Bold]">Pomodoro</h1>
+                    <img id="imageTimer" src="./style/images/gura-work.gif" alt="pomodoro" class="rounded-lg">
+                    <h1 id="time" class="text-[100px] font-[Helvetica-Bold]">25:00</h1>
                     <div class="flex flex-row gap-3 p-2">
                         <button id="pause" class="btn w-[100px] h-[40px]" onclick="pausePomodoro()">Start</button>
                         <button class="btn w-[100px] h-[40px]" onclick="resetPomodoro()">Reset</button> 
                     </div>
                 </div>
             </div>
-            <div class="flex flex-col sm:h-[285px] h-[300px] w-[300px] sm:w-fit gap-2 p-4 box_1 rounded-md">
+            <div class="flex flex-col sm:h-[527px] h-[300px] w-[300px] sm:w-fit gap-2 p-4 box_1 rounded-md">
                 <input type="text" id="task" class="input p-1 rounded-md outline-none border-black border-[2px]" placeholder="Add your task here">
                 <div class="flex flex-row gap-2 w-full">
                     <button class="btn py-[3px] basis-3/4" onclick="addTask()">Add Task</button>
