@@ -6,6 +6,7 @@ const longRestBtn = document.getElementById('longRestBtn');
 let status = document.getElementById('status');
 const notificationPermission = document.getElementById('notificationPermission');
 let title = document.getElementById('title');
+let imageTimer = document.getElementById('imageTimer');
 
 let focused_btn = null;
 let timerInterval;
@@ -170,6 +171,7 @@ function pomodoro() {
     pomodoroBtn.classList.add('focused');
     shortRestBtn.classList.remove('focused');
     longRestBtn.classList.remove('focused');
+    imageTimer.src = './style/images/gura-work.gif';
 }
 
 function shortBreak() {
@@ -184,6 +186,7 @@ function shortBreak() {
     shortRestBtn.classList.add('focused');
     pomodoroBtn.classList.remove('focused');
     longRestBtn.classList.remove('focused');
+    imageTimer.src = './style/images/artoria_rest.gif';
 }
 
 function longBreak() {
@@ -198,6 +201,7 @@ function longBreak() {
     longRestBtn.classList.add('focused');
     pomodoroBtn.classList.remove('focused');
     shortRestBtn.classList.remove('focused');
+    imageTimer.src = './style/images/long_rest.gif';
 }
 
 function getCurrentTime() {
@@ -292,11 +296,14 @@ function loadTasks() {
     const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
     tasks.forEach(task => {
         const li = document.createElement('li');
+        const p = document.createElement('p');
         const check = document.createElement('input');
         check.type = 'checkbox';
         check.classList.add('check');
         check.checked = task.completed;
-        li.textContent = task.text;
+        p.classList.add('taskText');
+        p.textContent = task.text;
+        li.appendChild(p);
         li.appendChild(check);
         li.classList.add('taskLi');
         if (task.completed) {
@@ -310,17 +317,20 @@ function addTask() {
     const task = document.getElementById('task').value;
     const taskList = document.getElementById('taskList');
     const li = document.createElement('li');
+    const p = document.createElement('p');
     const check = document.createElement('input');
     check.type = 'checkbox';
     check.classList.add('check');
+    p.classList.add('taskText');
     if (!task) {
         alert('Task cannot be empty');
         return;
     }
-    li.textContent = task;
-    taskList.appendChild(li);
+    p.textContent = task;
+    li.appendChild(p);
     li.appendChild(check);
     li.classList.add('taskLi');
+    taskList.appendChild(li);
     document.getElementById('task').value = '';
     saveTasks(); // Save tasks to local storage
 }

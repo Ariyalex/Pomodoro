@@ -8,25 +8,30 @@
     src: url('./fonts/Helvetica.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'Helvetica-Bold';
+    src: url('./fonts/Helvetica-Bold.ttf') format('truetype');
+}
+
 
 * {
     font-family: 'Helvetica';
 }
 
 .box_1 {
-    @apply bg-[#9AA6B2] text-[#F8FAFC] w-fit h-fit rounded-md shadow-[6px_6px_0px_rgba(0,0,0,1)];
+    @apply w-fit h-fit border-black border-[2px] rounded-md shadow-[6px_6px_0px_rgba(0,0,0,1)];
 }
 
 .box_2 {
-    @apply rounded-lg hover:shadow-xl shadow-black transition-all duration-200 ease-in-out;
+    @apply rounded-lg border-black border-[2px] hover:shadow-xl shadow-black transition-all duration-200 ease-in-out;
 }
 
 .btn {
-    @apply bg-[#F8FAFC] text-[#4b4e50] rounded-md hover:shadow-[3px_3px_0px_rgba(0,0,0,1)] hover:-translate-x-[3px] hover:-translate-y-[3px] transition-all duration-200 ease-in-out;
+    @apply rounded-md border-black border-[2px] hover:shadow-[3px_3px_0px_rgba(0,0,0,1)] hover:-translate-x-[3px] hover:-translate-y-[3px] transition-all duration-200 ease-in-out;
 }
 
 .btn_2 {
-    @apply bg-[#F8FAFC] text-[#4b4e50] w-[100px] h-[40px] rounded-md transition-all duration-200 ease-in-out;
+    @apply w-[100px] h-[40px] rounded-md border-black border-[2px] transition-all duration-200 ease-in-out;
 }
 
 .focused {
@@ -34,7 +39,11 @@
 }
 
 .taskLi {
-    @apply flex flex-row justify-between bg-[#F8FAFC] text-[#4b4e50] rounded-md border-black border-[2px] list-decimal px-2 py-1;
+    @apply flex flex-row gap-2 w-[150px] sm:w-[175px] justify-between text-black rounded-md border-black border-[2px] px-2 py-1;
+}
+
+.taskText {
+    @apply w-[150px] break-all;
 }
 
 .lineThrough {
