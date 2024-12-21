@@ -6,26 +6,26 @@
     <link rel="stylesheet" href="../static/output.css">
     <script src="https://kit.fontawesome.com/385cd213ed.js" crossorigin="anonymous"></script>
 
-    <title>Pomodoro</title>
+    <title id="title">Pomodoro Timer</title>
 </head>
 <body class="bg-[#F8FAFC]">
-    <header class=" h-[50px] flex flex-row items-center px-[50px] z-30">
+    <header class=" h-[50px] flex flex-row items-center px-[50px] z-30 fixed top-0 w-full">
         <div class="flex flex-row justify-between w-full">
             <h1>Pomodoro</h1>
-            <button id="settingBtn" class="flex flex-row gap-2 ml-auto cursor-pointer" onclick="openSetting()">
+            <button id="settingBtn" class="flex flex-row gap-2 ml-auto cursor-pointer justify-center items-center" onclick="openSetting()">
                 <p>Setting</p>
                 <i class="fa-solid fa-gear"></i>
             </button>
         </div>
     </header>
-    <main class="bg-[#F8FAFC] flex sm:flex-row place-content-center flex-col gap-3 w-full h-full">
+    <main class="bg-[#F8FAFC] flex sm:flex-row items-center justify-center flex-col gap-3 w-full h-screen">
         <div class="flex flex-col items-center">
-            <div class="flex flex-row gap-3 p-4 mt-5 w-fit bg-[#BCCCDC] box_2" id="focused_btn">
+            <div class="flex flex-row gap-3 p-4 w-fit bg-[#BCCCDC] box_2" id="focused_btn">
                 <button id="pomodoroBtn" class="btn_2" onclick="pomodoro()" >Pomodoro</button>
                 <button id="shortRestBtn" class="btn_2" onclick="shortBreak()">Short Rest</button>
                 <button id="longRestBtn" class="btn_2" onclick="longBreak()" >Long Rest</button>
             </div>
-            <div class="flex flex-col place-items-center box_1 py-2 mt-5 px-10">
+            <div class="flex flex-col place-items-center mt-5 box_1 py-2 px-10">
                 <h1 id="status" class="text-[35px] font-semibold">Pomodoro</h1>
                 <h1 id="time" class="text-[100px] font-bold">25:00</h1>
                 <div class="flex flex-row gap-3 p-2">
@@ -34,11 +34,11 @@
                 </div>
             </div>
         </div>
-        <div class="flex flex-col h-[370px] gap-2 p-4 mt-5 bg-[#9AA6B2] shadow-[5px_5px_0px_rgba(0,0,0,1)] rounded-md">
+        <div class="flex flex-col sm:h-[370px] h-[300px] w-[300px] sm:w-fit gap-2 p-4 bg-[#9AA6B2] shadow-[5px_5px_0px_rgba(0,0,0,1)] rounded-md">
             <input type="text" id="task" class="input p-1 rounded-md outline-none border-black border-[1px]" placeholder="Add your task here">
             <div class="flex flex-row gap-2 w-full">
-                <button class="btn py-[3px] basis-1/2" onclick="addTask()">Add Task</button>
-                <button class="btn py-[3px] basis-1/2" onclick="deleteTask()">Del Done</button>
+                <button class="btn py-[3px] basis-3/4" onclick="addTask()">Add Task</button>
+                <button class="btn py-[3px] basis-1/4" onclick="deleteTask()"><i class="fa-solid fa-trash"></i></button>
             </div>
 
             <ul id="taskList" class="list-disc list-inside text-white gap-2 flex flex-col overflow-auto">
@@ -49,20 +49,24 @@
         <div class="bg-white p-6 rounded-md shadow-md w-1/3">
             <h2 class="text-xl font-bold mb-4">Settings</h2>
             <div class="mb-4">
+                <label for="interval" class="block text-sm font-medium text-gray-700">Pomodoro interval</label>
+                <input type="number" id="pomodoroInterval" class="mt-1 p-2 border border-gray-300 rounded-md w-full" min="1" value="2">
+            </div>
+            <div class="mb-4">
                 <label for="pomodoroDuration" class="block text-sm font-medium text-gray-700">Pomodoro Duration (minutes)</label>
-                <input type="number" id="pomodoroDuration" class="mt-1 p-2 border border-gray-300 rounded-md w-full" min="1">
+                <input type="number" id="pomodoroDuration" class="mt-1 p-2 border border-gray-300 rounded-md w-full" min="1" value="25">
             </div>
             <div class="mb-4">
                 <label for="shortBreakDuration" class="block text-sm font-medium text-gray-700">Short Break Duration (minutes)</label>
-                <input type="number" id="shortBreakDuration" class="mt-1 p-2 border border-gray-300 rounded-md w-full" min="1">
+                <input type="number" id="shortBreakDuration" class="mt-1 p-2 border border-gray-300 rounded-md w-full" min="1" value="5">
             </div>
             <div class="mb-4">
                 <label for="longBreakDuration" class="block text-sm font-medium text-gray-700">Long Break Duration (minutes)</label>
-                <input type="number" id="longBreakDuration" class="mt-1 p-2 border border-gray-300 rounded-md w-full" min="1">
+                <input type="number" id="longBreakDuration" class="mt-1 p-2 border border-gray-300 rounded-md w-full" min="1" value="15">
             </div>
             <div class="flex justify-end gap-2">
                 <button class="btn p-2 bg-red-500 text-white rounded-md" onclick="closeSetting()">Cancel</button>
-                <button class="btn p-2 bg-blue-500 text-white rounded-md" onclick="saveSettings()">Save</button>
+                <button class="btn p-2 bg-blue-500 text-white rounded-md" id="saveSettings">Save</button>
             </div>
         </div>
     </div>
