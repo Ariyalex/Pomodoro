@@ -129,7 +129,7 @@ function startTimer(duration, display) {
         } else {
             remainingTime = timer;
         }
-    }, 1000);
+    },1000);
 }
 
 function resetPomodoro() {
@@ -182,7 +182,7 @@ function shortBreak() {
     remainingTime = short_break_time;
     display.textContent = formatTime(short_break_time);
     document.getElementById('pause').textContent = 'Start';
-    status.textContent = 'Short Break';
+    status.textContent = 'Short Rest';
     shortRestBtn.classList.add('focused');
     pomodoroBtn.classList.remove('focused');
     longRestBtn.classList.remove('focused');
@@ -197,7 +197,7 @@ function longBreak() {
     remainingTime = long_break_time;
     display.textContent = formatTime(long_break_time);
     document.getElementById('pause').textContent = 'Start';
-    status.textContent = 'Long Break';
+    status.textContent = 'Long Rest';
     longRestBtn.classList.add('focused');
     pomodoroBtn.classList.remove('focused');
     shortRestBtn.classList.remove('focused');

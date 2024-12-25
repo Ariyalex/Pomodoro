@@ -43,7 +43,7 @@
 }
 
 .taskText {
-    @apply w-[150px] break-words text-start;
+    @apply w-[150px] break-all text-start;
 }
 
 .lineThrough {
