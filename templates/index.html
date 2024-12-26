@@ -26,7 +26,7 @@
                 <button id="longRestBtn" class="btn_2" onclick="longBreak()" >Long Rest</button>
             </div>
             <div class="flex flex-col flex-wrap sm:flex-row gap-5 justify-center items-center sm:items-start">
-                <div class="flex flex-col sm:h-[527px] h-[300px] w-[300px] sm:w-fit gap-2 p-4 box_1 rounded-md order-2 lg:order-1">
+                <div class="flex flex-col sm:max-h-[527px] max-h-[300px] w-[300px] sm:w-fit gap-2 p-4 box_1 rounded-md order-2 lg:order-1">
                     <input type="text" id="task" class="input p-1 rounded-md outline-none border-black border-[2px]" placeholder="Add your task here">
                     <div class="flex flex-row gap-2 w-full">
                         <button class="btn py-[3px] basis-3/4" onclick="addTask()">Add Task</button>
@@ -45,7 +45,10 @@
                         <button class="btn w-[100px] h-[40px]" onclick="resetPomodoro()">Reset</button> 
                     </div>
                 </div>
-                <div class="flex flex-col gap-3 p-4 box_1 rounded-md order-3 mb-8 mx-5">
+                <div class="flex flex-col gap-3 p-4 rounded-md order-3 h-[527px] w-[400px] sm:w-fit">
+                    <iframe style="border-radius:12px" class="outline-none" src="https://open.spotify.com/embed/playlist/6zCID88oNjNv9zx6puDHKj?utm_source=generator&theme=0" width="100%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </div>
+                <div class="flex flex-col gap-3 p-4 box_1 rounded-md order-4 mb-8 mx-5">
                     <h2 class="text-[25px] font-[Helvetica-Bold]">How to use</h2>
                     <ul class="list-decimal list-inside text-black gap-2 text-[18px]">
                         <li>Set task to-do</li>
@@ -56,6 +59,7 @@
                         <li>After 2 "POMODORO" take a long break (you can change pomodoro interval by setting)</li>
                     </ul>
                 </div>
+                
             </div>
         </div>
     </main>

@@ -42,8 +42,9 @@
     @apply flex flex-row gap-2 w-[150px] sm:w-[175px] justify-between text-black rounded-md border-black border-[2px] px-2 py-1;
 }
 
+
 .taskText {
-    @apply w-[150px] break-all text-start;
+    @apply break-words text-start max-w-[135px];
 }
 
 .lineThrough {
