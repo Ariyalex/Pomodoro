@@ -14,3 +14,4 @@ aplikasi bisa diakses di: https://ariyalexx.pages.dev/
   3. interval 3: pomodoro -> shortrest -> pomodoro -> shortrest -> pomodoro -> longrest -> ulangi dari awal.
 - aplikasi akan berpindah timer secara otomatis sesuai interval, baik itu timer pomodoro, shortrest, dan longrest.
 - ketika berpindah timer, pengguna harus menekan tombol start untuk memulai timer
+- aplikasi sudah responsif di berbagai ukuran layar, anda bisa mengeceknya dengan membuka link di atas.
