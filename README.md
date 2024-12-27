@@ -6,7 +6,7 @@ aplikasi bisa diakses di: https://ariyalexx.pages.dev/
 - kenapa tidak menggunakan api?? karena jika menggunakan api, pengguna yang tidak berlangganan spotify premium tidak bisa memutar lagu, untuk itu saya menggunakan embed spotify yang hanya menampilkan dan memutar 1 playlist. 
 - ketika pertama kali membuka web akan ada popup untuk mengaktifkan notifikasi, ini diperlukan agar ketika timer berakhir pengguna bisa mendapatkan notifikasi via web. 
 - ketika pomodoro selesai, user mencoret list dengan checklist, pengguna bisa menghapus list dengan menandai list dengan checklist lalu klik tombol sampah. 
-- pomodoro berjalan sesuai interval default(2) atau interval yang disetting pengguna.
+- pomodoro berjalan sesuai interval default(2) atau interval yang disetting pengguna. 
   contoh kerja interval:
   1. interval 1: pomodoro -> longrest -> ulangi dari awal
   2. interval 2: pomodoro -> shortrest -> pomodoro -> longrest -> ulangi step dari awal
