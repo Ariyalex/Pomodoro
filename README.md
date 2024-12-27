@@ -1,6 +1,6 @@
 # Pomodoro 
-aplikasi bisa diakses di: https://ariyalexx.pages.dev/ 
-### cara penggunaan pomodoro bisa dilihat di web.  
+#### aplikasi bisa diakses di: https://ariyalexx.pages.dev/ 
+#### cara penggunaan pomodoro bisa dilihat di web.  
 ## catatan
 - tombol settings di kanan atau untuk mengatur waktu dan interval pomodoro. 
 - terdapat pemutar lofi yang menggunakan spotify, ini berkerja dengan baik jika dibuka menggunakan komputer, jika web dibuka menggunakan handphone maka spotify hanya memutar preview dari music. 
