@@ -8,8 +8,8 @@ aplikasi bisa diakses di: https://ariyalexx.pages.dev/
 - ketika pomodoro selesai, user mencoret list dengan checklist, pengguna bisa menghapus list dengan menandai list dengan checklist lalu klik tombol sampah. 
 - pomodoro berjalan sesuai interval default(2) atau interval yang disetting pengguna.
   contoh kerja interval:
-  1. interval 2: pomodoro -> shortrest -> pomodoro -> longrest -> ulangi step dari awal
-  2. interval 1: pomodoro -> longrest -> ulangi dari awal
+  1. interval 1: pomodoro -> longrest -> ulangi dari awal
+  2. interval 2: pomodoro -> shortrest -> pomodoro -> longrest -> ulangi step dari awal
   3. interval 3: pomodoro -> shortrest -> pomodoro -> shortrest -> pomodoro -> longrest -> ulangi dari awal.
 - aplikasi akan berpindah timer secara otomatis sesuai interval, baik itu timer pomodoro, shortrest, dan longrest.
 - ketika berpindah timer, pengguna harus menekan tombol start untuk memulai timer
